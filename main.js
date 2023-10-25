@@ -1,11 +1,17 @@
 function tocaSomPom(idElementoAudio){
-document.querySelector(idElementoAudio).play(); 
+const elemento = document.querySelector(idElementoAudio);
+if (elemento === null){
+   alert('Elemento não encontrado');
+}
+ if (elemento != null){
+   elemento.play();
+ }
 
 }
 
  const listaDeTeclas = document.querySelectorAll('.tecla');
-   // Estrutura de repetição - Enquanto
-for (let contador = 0;contador < listaDeTeclas.length;contador++) {
+   //para
+for (let contador = 0;contador < listaDeTeclas.length; contador++) {
 
    const tecla = listaDeTeclas[contador];
    const instrumento = tecla.classList[1];
@@ -18,7 +24,7 @@ for (let contador = 0;contador < listaDeTeclas.length;contador++) {
    tecla.onkeydown = function (evento) {
      console.log(evento.code == 'Space')
      
-      if (evento.code === 'Space') { 
+      if (evento.code === 'Enter' || evento.code === 'Space' ) { 
 
        tecla.classList.add('ativa');
       }
