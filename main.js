@@ -1,5 +1,5 @@
-function tocaSomPom(idElementoAudio){
-const elemento = document.querySelector(idElementoAudio);
+function tocaSomPom(seletorAudio){
+const elemento = document.querySelector(seletorAudio);
 if (elemento === null){
    alert('Elemento não encontrado');
 }
